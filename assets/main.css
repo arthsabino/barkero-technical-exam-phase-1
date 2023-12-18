@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: rgb(74, 222, 128);
+  --primary-touch: rgb(22, 101, 52);
+  --secondary: rgb(15, 23, 42);
+  --grey: rgba(160, 160, 160, 1);
+  --warning: rgb(249, 115, 22);
+  --nav-height: 4rem;
+  --side-width: 16rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  @apply font-bold text-xl xl:text-4xl sm:text-2xl md:text-3xl md:font-extrabold;
+}
+
+.content-container {
+  @apply flex h-full w-full items-center px-2 sm:px-4 md:px-8 lg:px-12;
+}
+
+/* forms */
+.input-container {
+  @apply min-w-[200px] w-full flex flex-col gap-2;
+}
+
+.input-container > label {
+  @apply text-grey opacity-50;
+}
+
+.input-container > label.alt {
+  @apply text-white opacity-100;
+}
+
+.nav-link {
+  @apply hover:text-primary font-semibold cursor-pointer;
+}
+
+.nav-link.active {
+  @apply text-primary font-semibold;
+}
+
+.scrollable-table-container {
+  @apply overflow-auto sm:overflow-visible;
+}
+
+table tr td:first-child, table tr td:last-child {
+  @apply px-2;
+}
+
+table tr td {
+  @apply md:min-w-fit min-w-[100px];
+}
